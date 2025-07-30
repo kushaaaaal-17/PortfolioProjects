@@ -1,4 +1,4 @@
-
+-- SKILLS USED: Query Optimization, Window Functions, Common Table Expressions, Joins, Aggregate Functions, Filtering & View Creation
 -- QUERY TO VIEW ENTIRE TABLE
 SELECT *
 FROM PortfolioProjectsDB..CovidDeaths
@@ -47,7 +47,7 @@ WHERE continent IS NOT NULL
 GROUP BY location, population
 ORDER BY HighestRecordedDeaths DESC
 
--- Trial Queries
+-- This Query will show the total deaths by continent
 WITH LatestDeaths AS (
     SELECT continent, location, MAX(CAST(total_deaths AS INT)) AS TotalDeaths
     FROM PortfolioProjectsDB..CovidDeaths
